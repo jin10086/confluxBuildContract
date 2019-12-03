@@ -6,10 +6,6 @@ const ConfluxWeb = require('conflux-web');
 // create a a new conflux-web connection
 const confluxWeb = new ConfluxWeb('http://testnet-jsonrpc.conflux-chain.org:12537');
 
-//创建地址
-let a = confluxWeb.cfx.accounts.create();
-console.log("pub_key:", a.address, "priv_key:", a.privateKey)
-
 
 // Adds an account using a private key
 const priv_key = '';
