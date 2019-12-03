@@ -8,8 +8,8 @@ const confluxWeb = new ConfluxWeb('http://testnet-jsonrpc.conflux-chain.org:1253
 
 
 // Adds an account using a private key
-const priv_key = '';
-const pub_key = '';
+const priv_key = '0x0ac9e33baa5cc302785a7fa1ef8912ff34b492ad0d52c7d518fe80975191bbaa';
+const pub_key = '0xa17b63007bd491822306b3b8c793311e7a21e8de';
 confluxWeb.cfx.accounts.wallet.add(priv_key);
 
 
@@ -44,6 +44,7 @@ async function deployContract(abi, code) {
         gasPrice: 100,
     });
     // wait for receipt
+    console.log("txhash:", tx_hash);
     const receipt = await waitForReceipt(tx_hash);
     console.log("contract deployed. address:", receipt.contractCreated)
     return receipt.contractCreated;
