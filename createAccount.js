@@ -3,4 +3,4 @@ const confluxWeb = new ConfluxWeb('http://testnet-jsonrpc.conflux-chain.org:1253
 
 //创建地址
 let a = confluxWeb.cfx.accounts.create();
-console.log("pub_key:", a.address, "priv_key:", a.privateKey)
+console.log("pub_key:", a.address, '\n', "priv_key:", a.privateKey)
